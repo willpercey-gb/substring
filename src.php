@@ -1,4 +1,4 @@
- protected function substring($document, $start = false, $end = false)
+ function substring($document, $start = false, $end = false)
     {
         if ($start) {
             $start_position = mb_stripos($document, $start);
