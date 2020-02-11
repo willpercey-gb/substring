@@ -1,13 +1,19 @@
 <?php
-if(!function_exists('substring')) {
-    function substring($document, $start = false, $end = false)
+if (!function_exists('substring')) {
+    /**
+     * @param $document
+     * @param string $start
+     * @param string $end
+     * @return bool|string
+     */
+    function substring($document, $start = '', $end = '')
     {
-        if ($start) {
+        if (!empty($start)) {
             $start_position = mb_stripos($document, $start);
             if (!($start_position === false)) $start_position = $start_position + strlen($start);
         } else $start_position = 0;
 
-        if ($end) $end_position = @mb_stripos($document, $end, $start_position);
+        if (!empty($end)) $end_position = @mb_stripos($document, $end, $start_position);
         else {
             $end_position = strlen($document);
         }

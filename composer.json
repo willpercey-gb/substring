@@ -1,0 +1,23 @@
+{
+  "name": "uwebpro/substring",
+  "type": "library",
+  "description": "A simple method for getting sub-strings",
+  "keywords": ["sub","string", "substring", "uwebpro"],
+  "homepage": "https://github.com/willpercey-gb/substring",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Will Percey",
+      "email": "info@uwebpro.com",
+      "homepage": "https://uwebpro.com/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.2.0"
+  },
+  "autoload": {
+    "classmap": ["src/"],
+    "files": ["src/function.php"]
+  }
+}
