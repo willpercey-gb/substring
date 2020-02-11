@@ -1,4 +1,6 @@
- function substring($document, $start = false, $end = false)
+<?php
+if(!function_exists('substring')) {
+    function substring($document, $start = false, $end = false)
     {
         if ($start) {
             $start_position = mb_stripos($document, $start);
@@ -13,3 +15,4 @@
         return trim(substr($document, $start_position, $end_position - $start_position));
 
     }
+}
