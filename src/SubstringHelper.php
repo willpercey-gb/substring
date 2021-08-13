@@ -4,7 +4,7 @@ namespace UWebPro\Str;
 
 final class SubstringHelper
 {
-    public static function method($document, $start, $end)
+    public static function method($document, $start, $end): ?string
     {
         if ($start) {
             $start_position = mb_stripos($document, $start);
@@ -17,14 +17,12 @@ final class SubstringHelper
 
         if ($end) {
             $end_position = @mb_stripos($document, $end, $start_position);
-        }
-        else {
+        } else {
             $end_position = strlen($document);
         }
         if ($start_position === false || $end_position === false) {
-            return false;
+            return null;
         }
         return trim(substr($document, $start_position, $end_position - $start_position));
-
     }
 }

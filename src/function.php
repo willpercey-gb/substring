@@ -1,12 +1,16 @@
 <?php
+
+use JetBrains\PhpStorm\Pure;
+
 if (!function_exists('substring')) {
     /**
      * @param $document
-     * @param string $start
-     * @param string $end
-     * @return bool|string
+     * @param string|null $start
+     * @param string|null $end
+     * @return string|null
      */
-    function substring($document, ?string $start = null, ?string $end = null)
+    #[Pure]
+    function substring($document, ?string $start = null, ?string $end = null): ?string
     {
         return \UWebPro\Str\SubstringHelper::method($document, $start, $end);
     }

@@ -2,15 +2,18 @@
 
 namespace UWebPro\Str;
 
+use JetBrains\PhpStorm\Pure;
+
 trait Substring
 {
     /**
      * @param $document
-     * @param string $start
-     * @param string $end
-     * @return bool|string
+     * @param string|null $start
+     * @param string|null $end
+     * @return string|null
      */
-    public function substring($document, ?string $start = null, ?string $end = null)
+    #[Pure]
+    public function substring($document, ?string $start = null, ?string $end = null): ?string
     {
         return SubstringHelper::method($document, $start, $end);
     }
